@@ -366,7 +366,7 @@ int main(int argc, char *argv[])
 	while (1)
 	{
 		char *str = input_buf;  //指向输入缓存
-		int len = 0;  //输入字符串长度
+		size_t len = 0;  //输入字符串长度
 
 		printf("please input command:\n");
 		fgets(input_buf, sizeof(input_buf), stdin);  //从stdin得到输入，以'\n'结尾
@@ -374,7 +374,7 @@ int main(int argc, char *argv[])
 		//去除末尾的'\n'
 		*(str + len - 1) = '\0';
 		len -= 1;
-		printf("len=%ld,input string:%s\n", len, str);
+		printf("len=%lld,input string:%s\n", len, str);
 
 
 		if (strncmp(str, "sort",4) == 0)  //排序
@@ -470,7 +470,7 @@ int main(int argc, char *argv[])
 		else if (strcmp(str, "heap") == 0)
 		{
 			uint8_t *p = NULL;
-			uint64_t size = 2 * 1024 * 1024 * 1024;
+			uint64_t size = 8 * 1024 * 1024 * 1024ull;
 
 			p = (uint8_t *)malloc(size);
 			if (p == NULL)

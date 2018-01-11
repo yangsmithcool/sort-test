@@ -9,7 +9,7 @@
 
 #define LENGTH_OF(x)   (sizeof(x)/sizeof(*x))   //求数组元素个数
 
-#define ARRAY_COUNT    (12800000)  //排序元素个数
+#define ARRAY_COUNT    (20480000)  //排序元素个数
 //#define __DEBUG   //排序过程输出调试
 //#define __INPUT   //输出排序前的数据
 //#define __OUTPUT  //输出排序后的数据
